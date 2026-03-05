@@ -1,11 +1,57 @@
 # Appeeky — Market Intelligence
 
-Category charts, featured apps, new releases, trending data, and download estimates.
+Category charts, featured apps, new releases, trending data, download estimates, and chart movement tracking.
 
 **Base URL:** `https://api.appeeky.com`
 **Auth:** `X-API-Key` header (REST) or `Authorization: Bearer` (MCP)
 
 ## Endpoints
+
+### Market Movers
+
+Top gainers, losers, new entries, and apps that dropped out of the charts. Compares the two most recent chart snapshots (taken every 6 hours).
+
+```bash
+GET /v1/market/movers?country=us&chart=top-free&genre=all&limit=10
+```
+
+**MCP:** `get_market_movers(country, chart, genre, limit)`
+
+**Use in skills:** `market-movers`, `market-pulse`, `competitor-analysis`
+
+**Parameters:**
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `country` | `us` | ISO country code |
+| `chart` | `top-free` | `top-free`, `top-paid`, `top-grossing` |
+| `genre` | `all` | Genre ID or `all` for overall chart |
+| `limit` | `10` | Max results per section (1-25) |
+
+**Response sections:** `topGainers`, `topLosers`, `newEntries`, `droppedOut`
+
+Each item includes: `appId`, `appName`, `developer`, `iconUrl`, `genreId`, `genreName`, `currentRank`, `previousRank`, `rankChange`, `rating`, `reviewCount`.
+
+### Market Activity
+
+Live feed of all significant chart movements (3+ position changes, new entries, exits). Sorted by magnitude of change.
+
+```bash
+GET /v1/market/activity?country=us&chart=top-free&genre=all&limit=25
+```
+
+**MCP:** `get_market_activity(country, chart, genre, limit)`
+
+**Use in skills:** `market-movers`, `market-pulse`, `competitor-analysis`
+
+**Activity types:**
+
+| Type | Description |
+|------|-------------|
+| `new_entry` | App appeared in top 100 (wasn't in previous snapshot) |
+| `rank_up` | App improved by 3+ positions |
+| `rank_down` | App dropped by 3+ positions |
+| `dropped_out` | App left the top 100 |
 
 ### Category Charts
 
@@ -159,6 +205,14 @@ curl -H "X-API-Key: $KEY" \
 ### Track market position weekly
 
 ```bash
+# Who's gaining and losing in your category?
+curl -H "X-API-Key: $KEY" \
+  "https://api.appeeky.com/v1/market/movers?country=us&chart=top-free&genre=$GENRE_ID&limit=10"
+
+# Full activity feed
+curl -H "X-API-Key: $KEY" \
+  "https://api.appeeky.com/v1/market/activity?country=us&chart=top-free&genre=$GENRE_ID"
+
 # Your category chart position
 curl -H "X-API-Key: $KEY" \
   "https://api.appeeky.com/v1/apps/$APP_ID/country-rankings?chart=top-free"
@@ -180,6 +234,8 @@ curl -H "X-API-Key: $KEY" \
 
 | Endpoint | Credits |
 |----------|---------|
+| Market movers | 3 |
+| Market activity | 2 |
 | Category charts | 2 |
 | Downloads to top | 2 |
 | Featured apps | 3 |

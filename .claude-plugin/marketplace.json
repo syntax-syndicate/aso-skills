@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "aso-skills",
-      "description": "15 ASO and app marketing skills for indie developers, app marketers, and growth teams. Covers keyword research, metadata optimization, competitor analysis, screenshot design, review management, localization, user acquisition, monetization, and more.",
+      "description": "17 ASO and app marketing skills for indie developers, app marketers, and growth teams. Covers keyword research, metadata optimization, competitor analysis, market intelligence, chart tracking, screenshot design, review management, localization, user acquisition, monetization, and more.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -30,7 +30,9 @@
         "./skills/ua-campaign",
         "./skills/app-store-featured",
         "./skills/app-analytics",
-        "./skills/ab-test-store-listing"
+        "./skills/ab-test-store-listing",
+        "./skills/market-movers",
+        "./skills/market-pulse"
       ]
     }
   ]

@@ -14,7 +14,7 @@
   </p>
 </div>
 
-AI agent skills for App Store Optimization (ASO) and mobile app marketing. Built for indie developers, app marketers, and growth teams who want **Cursor**, **Claude Code**, or any [Agent Skills](https://agentskills.io)-compatible AI assistant to help with keyword research, metadata optimization, competitor analysis, and app growth.
+AI agent skills for App Store Optimization (ASO) and mobile app marketing. Built for indie developers, app marketers, and growth teams who want **Cursor**, **Claude Code**, or any [Agent Skills](https://agentskills.io)-compatible AI assistant to help with keyword research, metadata optimization, competitor analysis, market intelligence, and app growth.
 
 Powered by real App Store data via the [Appeeky API](https://docs.appeeky.com).
 
@@ -39,9 +39,11 @@ Then ask your agent:
 "Find the best keywords for a meditation app"
 "Optimize my App Store title and subtitle"
 "How many downloads do I need to reach top 10 in Health & Fitness?"
+"What apps are rising in the charts right now?"
+"Give me a market briefing for the Games category"
 ```
 
-Or invoke directly: `/aso-audit`, `/keyword-research`, `/metadata-optimization`
+Or invoke directly: `/aso-audit`, `/keyword-research`, `/metadata-optimization`, `/market-movers`, `/market-pulse`
 
 ## Skills
 
@@ -83,6 +85,13 @@ Or invoke directly: `/aso-audit`, `/keyword-research`, `/metadata-optimization`
 |-------|-------------|
 | [`app-analytics`](skills/app-analytics) | Event tracking plan, dashboard setup, KPI framework with category benchmarks |
 | [`ab-test-store-listing`](skills/ab-test-store-listing) | Hypothesis → variant design → sample size → interpretation for App Store A/B tests |
+
+### Market Intelligence
+
+| Skill | What it does |
+|-------|-------------|
+| [`market-movers`](skills/market-movers) | Identifies top chart gainers/losers, new entries, and dropped apps — explains what's driving changes |
+| [`market-pulse`](skills/market-pulse) | Full market briefing: chart movements + trending keywords + featured apps + new launches in one view |
 
 ### Foundation
 

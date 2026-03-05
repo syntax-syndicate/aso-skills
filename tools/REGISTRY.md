@@ -36,6 +36,8 @@ Tools and integrations that ASO skills can use for real-time App Store data.
 | Keyword opportunities | — | `aso_find_opportunities` | [appeeky-aso.md](integrations/appeeky-aso.md) |
 | Competitor ASO report | — | `aso_competitor_report` | [appeeky-aso.md](integrations/appeeky-aso.md) |
 | App search | `GET /v1/search` | `search_apps` | [appeeky.md](integrations/appeeky.md) |
+| Market movers (gainers/losers) | `GET /v1/market/movers` | `get_market_movers` | [appeeky-market.md](integrations/appeeky-market.md) |
+| Market activity feed | `GET /v1/market/activity` | `get_market_activity` | [appeeky-market.md](integrations/appeeky-market.md) |
 | Category charts | `GET /v1/categories/:id/top` | `get_category_top` | [appeeky-market.md](integrations/appeeky-market.md) |
 | Downloads to top | `GET /v1/categories/:id/downloads-to-top` | `get_downloads_to_top` | [appeeky-market.md](integrations/appeeky-market.md) |
 | Featured apps | `GET /v1/featured` | `get_featured_apps` | [appeeky-market.md](integrations/appeeky-market.md) |
@@ -64,6 +66,8 @@ Which skills use which Appeeky tools:
 | `app-analytics` | `get_app_intelligence`, `get_country_rankings` |
 | `ab-test-store-listing` | `get_app` (screenshots), `get_app_intelligence` |
 | `app-marketing-context` | `get_app`, `get_app_keywords`, `search_apps` |
+| `market-movers` | `get_market_movers`, `get_market_activity`, `get_category_top`, `get_app` |
+| `market-pulse` | `get_market_movers`, `get_market_activity`, `get_trending_keywords`, `get_featured_apps`, `get_new_releases`, `get_new_number_1`, `get_downloads_to_top` |
 
 ## Other Useful Tools
 
