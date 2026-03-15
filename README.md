@@ -1,6 +1,6 @@
 # ASO & App Marketing Skills
 
-<a href="https://docs.appeeky.com">
+<a href="https://www.appeeky.com">
   <img width="auto" height="auto" alt="Appeeky" src="cover.png">
 </a>
 <div align="center">
@@ -17,6 +17,8 @@
 AI agent skills for App Store Optimization (ASO) and mobile app marketing. Built for indie developers, app marketers, and growth teams who want **Cursor**, **Claude Code**, or any [Agent Skills](https://agentskills.io)-compatible AI assistant to help with keyword research, metadata optimization, competitor analysis, market intelligence, and app growth.
 
 Powered by real App Store data via the [Appeeky API](https://docs.appeeky.com).
+
+A web version is also available, powered by LLMs and our MCP:[Appeeky Web](https://appeeky.com).
 
 ## Why This Exists
 
